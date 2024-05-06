@@ -33,6 +33,12 @@ public class bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Score.scoreValue += 1;
+
+            if(Score.scoreValue > 0 && Score.scoreValue%100 == 0)
+            {
+                Vidas.vidas += 1;
+            }
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
             

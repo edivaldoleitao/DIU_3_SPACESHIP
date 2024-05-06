@@ -21,5 +21,6 @@ public class Vidas : MonoBehaviour
     void Update()
     {
         score.text = "Vidas: " + vidas;
+
     }
 }
