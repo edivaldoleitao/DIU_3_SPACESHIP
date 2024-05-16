@@ -12,11 +12,13 @@ public class enemyScript : MonoBehaviour
     public float currentMoveSpeed;
 
     private float timeElapsed = 0f;
-
+    Boss obj;
     void Start()
     {
         InvokeRepeating("ChangeDirection", 0f, moveDuration);
         Destroy(gameObject, 20);
+
+
     }
 
     // Update is called once per frame

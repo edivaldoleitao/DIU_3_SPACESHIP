@@ -54,7 +54,7 @@ public class spaceship : MonoBehaviour
             {
                 shieldValue -= 1;
                 LevantarEscudo();
-                Invoke("LevantarEscudo", 1f);
+                Invoke("LevantarEscudo", 2f);
             }
         }
 
@@ -83,7 +83,21 @@ public class spaceship : MonoBehaviour
             {
                 Respawn();
                 LevantarEscudo();
-                Invoke("LevantarEscudo", 1f);
+                Invoke("LevantarEscudo", 2f);
+
+            }
+            else
+            {
+                PlayerDied();
+            }
+        }
+        if (collision.gameObject.CompareTag("bullet") && shield == false)
+        {
+            if (Vidas.vidas > 0)
+            {
+                Respawn();
+                LevantarEscudo();
+                Invoke("LevantarEscudo", 2f);
 
             }
             else

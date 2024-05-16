@@ -13,14 +13,14 @@ public class Vidas : MonoBehaviour
     void Start()
     {
         score = GetComponent<Text>();
-        score.text = "Vidas: " + vidas;
+        score.text = " " + vidas;
         vidas = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "Vidas: " + vidas;
+        score.text = " " + vidas;
 
     }
 }

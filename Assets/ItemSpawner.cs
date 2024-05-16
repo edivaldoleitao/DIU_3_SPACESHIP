@@ -32,5 +32,6 @@ public class ItemSpawner : MonoBehaviour
             // Define o próximo tempo de spawn
             nextSpawnTime = Time.time + Random.Range(spawnIntervalMin, spawnIntervalMax);
         }
+
     }
 }

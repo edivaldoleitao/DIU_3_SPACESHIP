@@ -11,13 +11,13 @@ public class Shield : MonoBehaviour
     void Start()
     {
         score = GetComponent<Text>();
-        score.text = "Shield: " + spaceship.shieldValue;
+        score.text = " " + spaceship.shieldValue;
  
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "Shield: " + spaceship.shieldValue;
+        score.text = " " + spaceship.shieldValue;
     }
 }

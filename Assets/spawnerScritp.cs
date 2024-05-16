@@ -14,11 +14,14 @@ public class spawnerScritp : MonoBehaviour
     public int maxEnemiesIncreaseAmount = 2; // Aumento na quantidade máxima de inimigos a cada intervalos
     private float timeSinceLastSpawnRateIncrease = 0f;
     private float increase = 1f;
-
+    private float reespawn;
+    Boss obj;
     void Start()
     {
         // Começa a spawnar inimigos
-        InvokeRepeating("SpawnEnemy", 0f, spawnInterval);
+
+        InvokeRepeating("SpawnEnemy", 1f, spawnInterval);
+        
     }
 
     void Update()
@@ -37,8 +40,10 @@ public class spawnerScritp : MonoBehaviour
             increase += 1;
 
             // Cancela a repetição atual e inicia uma nova com a nova taxa de spawn
-            CancelInvoke("SpawnEnemy");
-            InvokeRepeating("SpawnEnemy", 0f, spawnInterval);
+                CancelInvoke("SpawnEnemy");
+                InvokeRepeating("SpawnEnemy", 0f, spawnInterval);
+
+            
         }
     }
 
